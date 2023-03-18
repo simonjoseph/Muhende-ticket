@@ -1,107 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="../css/screencall.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balcão</title>
+  <link rel="stylesheet" href="../css/screencall.css">
 
-	<style>
+  <style>
+    body {
+      overflow: hidden;
+      background: #d6d6d6;
+    }
 
-		body{
-			overflow: hidden;
-			background: #d6d6d6;
-		}
+    main {
+      justify-content: center;
+    }
 
-		main{
-			justify-content: center;
-		}
-		.fs-1 {
-			font-size: 2.5rem !important;
-			text-align: center;
-		}
+    .fs-1 {
+      font-size: 2.5rem !important;
+      text-align: center;
+    }
 
-		.card {
-			height: 200px;
-			width: 600px;
-		}
+    .card {
+      height: 200px;
+      width: 600px;
+    }
 
-		.div2 {
-			width: 400px;
-			border: 0px;
-		}
+    .div2 {
+      width: 400px;
+      border: 0px;
+    }
 
-		.btn {
-			display: inline-block;
-			font-weight: 400;
-			line-height: 1.5;
-			color: #212529;
-			text-align: center;
-			text-decoration: none;
-			vertical-align: middle;
-			cursor: pointer;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			user-select: none;
-			background-color: transparent;
-			border: 1px solid transparent;
-			padding: 0.375rem 0.75rem;
-			font-size: 1rem;
-			border-radius: 0.25rem;
-			transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-		}
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
 
-		.btn-primary {
-			color: #fff;
-			background-color: #97c11f;
-			border-color: #97c11f;
-		}
+    .btn-primary {
+      color: #fff;
+      background-color: #97c11f;
+      border-color: #97c11f;
+    }
 
-		.btn-primary:hover{
-			background: #fff;
-			color: #97c11f;
-		}
+    .btn-primary:hover {
+      background: #fff;
+      color: #97c11f;
+    }
 
-		.btn{
-			padding: 0.5rem 1rem;
-			font-size: 1.25rem;
-			border-radius: 0.3rem;
-		}
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      border-radius: 0.3rem;
+    }
 
-		.svg-inline--fa {
-    display: inline-block;
-    font-size: inherit;
-    height: 1em;
-    overflow: visible;
-    vertical-align: -0.125em;
-}
+    .svg-inline--fa {
+      display: inline-block;
+      font-size: inherit;
+      height: 1em;
+      overflow: visible;
+      vertical-align: -0.125em;
+    }
 
-.svg-inline--fa.fa-w-16 {
-    width: 1em;
-}
+    .svg-inline--fa.fa-w-16 {
+      width: 1em;
+    }
 
-.btn-secondary {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
+    .btn-secondary {
+      color: #fff;
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
 
-.btn-secondary:hover{
-			background: #fff;
-			color: #6c757d;
-		}
+    .btn-secondary:hover {
+      background: #fff;
+      color: #6c757d;
+    }
 
-		a{
-			text-decoration: none;
-			color: #97c11f;
-		}
-	</style>
+    a {
+      text-decoration: none;
+      color: #97c11f;
+    }
+  </style>
 </head>
 
 <body>
-	<nav class="navbar fs-4 ">
+  <nav class="navbar fs-4 ">
 		<div class="cashier-flex" style="padding: 0 100px;" >
 			<img src="../img/logo.png" style="width: 100px;
 			height: auto;
@@ -112,6 +112,7 @@
 	</nav>
 
 	<main>
+    
 		<div class="card" style="margin-top: 200px;">
 			<div class="card-header">
 				<h5 class="card-title ">Atendendo (Balcão 1)</h5>
@@ -127,13 +128,13 @@
 					<!--  -->
 					<div class="list-group-item" data-id="7" style="">
 						<div class="ps-4">
-							<div class=" fs-4 cashier-flex"><span>0001</span>
+							<div class=" fs-4 cashier-flex"><span id="ticket-id">---</span>
 								<span
-									class="serve-queue">Triagem</span></div>
+									class="serve-queue" id="ticket-tipo">---</span></div>
 						</div>
 					</div>
 					<div class="cashier-flex" style="margin-top: 40px;">
-						<button class="btn btn-primary" >
+						<button class="btn btn-primary" id="next-button" >
 							<svg class="svg-inline--fa fa-forward fa-w-16" aria-hidden="true" 
 							focusable="false" data-prefix="fa" data-icon="forward" role="img" 
 							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
@@ -142,7 +143,7 @@
 							0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 
 							24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"></path></svg>
 							Próximo</button>
-						<button class="btn btn-secondary" >
+						<button class="btn btn-secondary" id="current-button" >
 							<svg class="svg-inline--fa fa-bullhorn fa-w-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z"></path></svg>
 							Notificar</button>
 					</div>
@@ -150,7 +151,70 @@
 			</div>
 		</div>
 	</main>
-	
+  <script src="../js/axios.js"></script>
+  <script>
+    let currentTicketIndex = 0;
+    let balcao = 1;
+    const ticketId = document.getElementById('ticket-id');
+    const ticketTipo = document.getElementById('ticket-tipo');
+    const ticketData = document.getElementById('ticket-data');
+    const nextButton = document.getElementById('next-button');
+    const currentButton = document.getElementById('current-button');
+    const audio = new Audio('../audio/ascend.mp3'); 
+
+    // Função que busca os dados do servidor e atualiza a página
+    const getTicketData = () => {
+      axios.get('http://localhost:3000/tickets/' + currentTicketIndex)
+        .then(response => {
+          const ticket = response.data;
+          ticketId.innerHTML = `${ticket.id}`;
+          ticketTipo.innerHTML = `${ticket.tipo_ser}`;
+          // ticketData.innerHTML = `Data: ${ticket.data}`;
+          playAudio();
+          speakTicketData(ticket);
+        })
+        .catch(error => console.log(error));
+    };
+
+    // Função que lê os dados do ticket usando o SpeechSynthesisVoice
+    const speakTicketData = (ticket) => {
+      const message = `Senha ${ticket.id}. ${ticket.tipo_ser}. Balcão: ${balcao}`;
+      const speech = new SpeechSynthesisUtterance(message);
+      speech.onend = () => {
+        nextButton.disabled = false; // Habilita o botão próximo após a leitura dos dados
+        currentButton.disabled = false; // Habilita o botão atual após a leitura dos dados
+      };
+      speechSynthesis.speak(speech);
+    }
+
+    // Função que toca o áudio
+    const playAudio = () => {
+      audio.play();
+    }
+
+    // Função que avança para o próximo ticket
+    const nextTicket = () => {
+      currentTicketIndex++;
+      nextButton.disabled = true; // Desabilita o botão próximo até a leitura dos dados do próximo ticket
+      currentButton.disabled = true; // Desabilita o botão atual até a leitura dos dados do próximo ticket
+      getTicketData();
+    };
+
+    // Função que busca os dados do ticket atual e atualiza a página
+    const currentTicket = () => {
+      audio.pause(); // Pausa o áudio antes de buscar o ticket atual
+      nextButton.disabled = true; // Desabilita o botão próximo até a leitura dos dados do ticket atual
+      currentButton.disabled = true; // Desabilita o botão atual até a leitura dos dados do ticket atual
+      getTicketData();
+    };
+
+    // Adiciona o evento de clique ao botão próximo
+    nextButton.addEventListener('click', nextTicket);
+    currentButton.addEventListener('click', currentTicket);
+
+    // Chama a função para buscar o primeiro ticket
+    getTicketData();
+  </script>
 </body>
 
 </html>
